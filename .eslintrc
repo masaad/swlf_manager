@@ -1,0 +1,50 @@
+{
+    "extends": "airbnb",
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jest/globals": true
+      },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+        "experimentalObjectRestSpread": true,
+        "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": ["react", "babel", "jest"],
+    "rules": {
+        "react/no-array-index-key": ["warn"],
+        "react/forbid-prop-types": ["error", { "forbid": ["any"] }],
+        "react/jsx-filename-extension": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "linebreak-style": ["error", "windows"],
+        "indent": ["error", 2],
+        "max-len": ["error", { "code": 120, "tabWidth": 2, "ignoreComments": true }],
+        "import/no-unresolved": [
+          2,
+          {
+            "ignore": [""]
+          }
+        ],
+        "import/extensions": ["off", "never"],
+        "import/prefer-default-export": ["off"],
+        "import/no-extraneous-dependencies": [0],
+        "space-before-function-paren": ["error", "never"],
+        "brace-style": ["error", "stroustrup"],
+        "jest/no-disabled-tests": "error",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error",
+        "padding-line-between-statements": [
+          "error",
+          { "blankLine": "always", "prev": "*", "next": "return" },
+          { "blankLine": "always", "prev": "directive", "next": "*" },
+          { "blankLine": "any", "prev": "directive", "next": "directive" }
+        ],
+        "lines-between-class-members": ["error", "always"]
+      }
+}
